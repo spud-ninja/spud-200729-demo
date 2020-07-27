@@ -1,3 +1,4 @@
+using BlazorLib.State;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
@@ -14,6 +15,7 @@ namespace BlazorServer
         {
             services.AddRazorPages();
             services.AddServerSideBlazor();
+            services.AddScoped<CounterState>();
         }
 
         public void Configure(IApplicationBuilder app)
