@@ -1,0 +1,28 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp3.1</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Components\**" />
+    <Compile Remove="Shared\**" />
+    <Content Remove="Components\**" />
+    <Content Remove="Shared\**" />
+    <EmbeddedResource Remove="Components\**" />
+    <EmbeddedResource Remove="Shared\**" />
+    <None Remove="Components\**" />
+    <None Remove="Shared\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Content Remove="App.razor" />
+    <Content Remove="Pages\Index.razor" />
+    <Content Remove="_Imports.razor" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\BlazorLib\BlazorLib.csproj" />
+  </ItemGroup>
+
+</Project>
